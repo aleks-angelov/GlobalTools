@@ -24,7 +24,7 @@
 				for (var j = 0; j < properties.Length; j++)
 				{
 					var objectType = items[i].GetType();
-					var propertyValue = objectType.GetProperty(properties[j]).GetValue(items[i]);
+					var propertyValue = objectType.GetProperty(properties[j])?.GetValue(items[i]);
 					htmlTable += $"<td>{propertyValue}</td>\n";
 				}
 				htmlTable += "</tr>\n";
